@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-alphabet = []
-for alph in range(97, 123)
-    alphabet.append(chr(alph))
+for j in range(ord('a'), ord('z') + 1):
+	print("{:j}".format(j), end="")
