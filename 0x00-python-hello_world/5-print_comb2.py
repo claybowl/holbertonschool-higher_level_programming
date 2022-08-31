@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-for number in range(99):
-    print(f"{numbers:02d}, ", end="")
-    if numbers == 98:
-        print(f"99")
-        break
+from os import lseek
+
+
+i = 0
+while i < 99:
+    print("{:02d},".format(i), end=" ")
+    i += 1
+print(i)
