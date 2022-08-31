@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-from itertools import count
-
-
 if __name__ == "__main__":
     import sys
-	numb = len(sys.argv)
-    if numb == 1:
-        print("{} arguments:,".format(numb - 1))
-    elif numb == 2:
-        print("{} arguments:,".format(numb - 1))
+	num = len(sys.argv)
+    if num == 1:
+        print("{} arguments:,".format(num - 1))
+    elif num == 2:
+        print("{} arguments:,".format(num - 1))
     else:
-        print("{} arguments:,".format(numb - 1))
+        print("{} arguments:,".format(num - 1))
 
-    for i in range(1, numb):
+    for i in range(1, num):
         print("{}: {}".format(i, sys.argv[i]))
