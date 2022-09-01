@@ -1,16 +1,11 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
-    num = len(sys.argv) - 1
-    if num == 0:
-        div = '.'
+    if (len(sys.argv) == 1):
+        print("0 arguments.")
+    elif (len(sys.argv) == 2):
+        print("1 arguments.")
     else:
-        div = ':'
-    if num == 1:
-        arg = "argument"
-    else:
-        arg = "arguments"
-
-    print(f"{num} {arg}{div}")
-    for i in range(1, (num + 1)):
-        print(f"{i}: {str(sys.argv[i])}")
+        print("{} arguments:".format(len(sys.argv) - 1))
+    for i, sys.argv in enumerate(sys.argv[1:]):
+        print(f"{i+1}: {sys.argv}")
