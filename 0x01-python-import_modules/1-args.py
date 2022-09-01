@@ -6,6 +6,6 @@ if __name__ == "__main__":
     elif (len(sys.argv) == 2):
         print("1 arguments.")
     else:
-        print("{} arguments:".format(len(sys.argv) - 1))
-    for i, sys.argv in enumerate(sys.argv[1:]):
-        print(f"{i+1}: {sys.argv}")
+        print(len((sys.argv) - 1), "arguments")
+    for i in range(1, len(sys.argv)):
+        print("{}: {}".format(i, sys.argv[i]))
