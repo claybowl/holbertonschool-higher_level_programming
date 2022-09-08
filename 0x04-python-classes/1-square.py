@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-from asyncio.constants import SENDFILE_FALLBACK_READBUFFER_SIZE
-"""Asyncio"""
-
+"""square"""
 class Square:
     """ class for defined Square """
     def __init__(self, size=0):
