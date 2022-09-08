@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 class Square:
     """
-    Represents an empty square
+    writes an empty class Square
     """
-    pass
+    def __init__(self, size=0):
+    """
+    create new field/private instance size
+    """
+    self.__size = size
+
