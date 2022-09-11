@@ -7,7 +7,7 @@ function that adds two integers
 
 def add_integer(a, b=98):
     """
-    this function returns the add of two numbers
+    this function returns the sum of two numbers
     """
 
     if not isinstance(a, (int, float)):
