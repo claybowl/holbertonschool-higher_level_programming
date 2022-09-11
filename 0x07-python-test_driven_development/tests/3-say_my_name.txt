@@ -1,0 +1,20 @@
+============================================
+            Test - say_my_name
+============================================
+
+
+Using say_my_name.py
+---------------------
+
+This is an example text file in reStructuredText format. First import
+``say_my_name`` from the ``say_my_name.py`` task:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+unique test:
+
+unique test:
+
+unique test:
+
+unique test:
