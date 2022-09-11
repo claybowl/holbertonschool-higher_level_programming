@@ -35,6 +35,3 @@ unique test:
     [[0.5, 1.0], [1.5, 2.0]]
 
 unique test:
-    >>> matrix_divided(None, 5)
-    Traceback (most recent call last):
-    NameError: name 'none' is not defined
