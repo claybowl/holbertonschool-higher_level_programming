@@ -37,6 +37,11 @@ test from main:
     Traceback (most recent call last):
     TypeError: a must be an integer
 
+test from main:
+    >>> add_integer(none)
+    Traceback (most recent call last):
+    NameError: name 'none' is not defined
+
 unique test 1:
     >>> add_integer(2, 3, 4)
     Traceback (most recent call last):
@@ -46,3 +51,4 @@ unique test 2:
     >>> add_integer("", "")
     Traceback (most recent call last):
     TypeError: a must be an integer
+
