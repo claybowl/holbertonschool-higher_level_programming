@@ -1,0 +1,34 @@
+============================================
+            Test 0 - {function_name}
+============================================
+
+
+Using {file_name}
+---------------------
+
+This is an example text file in reStructuredText format. First import
+``{function_name}`` from the ``{task_name}`` task:
+
+
+test from main:
+
+
+test from main:
+
+
+test from main:
+
+
+test from main:
+
+
+test from main:
+
+
+test from main:
+
+
+unique test 1:
+
+
+unique test 2:
