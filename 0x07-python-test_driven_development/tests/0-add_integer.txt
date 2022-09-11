@@ -1,11 +1,12 @@
 ============================================
-            Test 0 - add integer
+            Test 0 - add_integer
 ============================================
 
 
 Using 0-add_integer.py
+---------------------
 
-This is an example text file in reStructuredText format.  First import
+This is an example text file in reStructuredText format. First import
 ``add_integer`` from the ``0-add_integer`` task:
 
     >>> add_integer = __import__("0-add_integer").add_integer
@@ -28,21 +29,20 @@ test from main:
 
 test from main:
     >>> add_integer(4, "School")
-Traceback (most recent call last):
-TypeError: b must be an integer
-
+    Traceback (most recent call last):
+    TypeError: b must be an integer
 
 test from main:
     >>> add_integer(None)
-Traceback (most recent call last):
-TypeError: a must be an integer
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
 unique test 1:
->>> add_integer(2, 3, 4)
-Traceback (most recent call last):
-TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+    >>> add_integer(2, 3, 4)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 unique test 2:
->>> add_integer("", "")
-Traceback (most recent call last):
-TypeError: a must be an integer
+    >>> add_integer("", "")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
