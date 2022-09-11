@@ -3,11 +3,11 @@
 ============================================
 
 
-Using say_my_name.py
+Using 3-say_my_name.py
 ---------------------
 
 This is an example text file in reStructuredText format. First import
-``say_my_name`` from the ``say_my_name.py`` task:
+``say_my_name`` from the ``3-say_my_name`` task:
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
