@@ -1,19 +1,22 @@
 ============================================
-            Test 0 - {function_name}
+            Test 1 - matrix_divided
 ============================================
 
 
-Using {file_name}
+Using 2-matrix_divided.py
 ---------------------
 
 This is an example text file in reStructuredText format. First import
-``{function_name}`` from the ``{task_name}`` task:
+``matrix_divided`` from the ``task 1`` task:
 
-
-test from main:
-
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 test from main:
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+test from main:
+    
 
 
 test from main:

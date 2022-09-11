@@ -11,33 +11,33 @@ This is an example text file in reStructuredText format. First import
 
     >>> add_integer = __import__("0-add_integer").add_integer
 
-test from main:
+test from main 1:
     >>> add_integer(1,2)
     3
 
-test from main:
+test from main 2:
     >>> add_integer(100, -2)
     98
 
-test from main:
+test from main 3:
     >>> add_integer(2)
     100
 
-test from main:
+test from main 4:
     >>> add_integer(100.3, -2)
     98
 
-test from main:
+test from main 5:
     >>> add_integer(4, "School")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
-test from main:
+test from main 6:
     >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
-test from main:
+test from main 7:
     >>> add_integer(none)
     Traceback (most recent call last):
     NameError: name 'none' is not defined
@@ -52,3 +52,7 @@ unique test 2:
     Traceback (most recent call last):
     TypeError: a must be an integer
 
+unique test 3:
+    >>> add_integer(hi, "bye")
+    Traceback (most recent call last):
+    NameError: name 'hi' is not defined
