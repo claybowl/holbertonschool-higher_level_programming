@@ -30,29 +30,35 @@ test from main 4:
 test from main 5:
     >>> add_integer(4, "School")
     Traceback (most recent call last):
+    ...
     TypeError: b must be an integer
 
 test from main 6:
     >>> add_integer(None)
     Traceback (most recent call last):
+    ...
     TypeError: a must be an integer
 
 test from main 7:
     >>> add_integer(none)
     Traceback (most recent call last):
+    ...
     NameError: name 'none' is not defined
 
 unique test 1:
     >>> add_integer(2, 3, 4)
     Traceback (most recent call last):
+    ...
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 unique test 2:
     >>> add_integer("", "")
     Traceback (most recent call last):
+    ...
     TypeError: a must be an integer
 
 unique test 3:
     >>> add_integer(hi, "bye")
     Traceback (most recent call last):
+    ...
     NameError: name 'hi' is not defined
