@@ -1,53 +1,42 @@
-============================================
-            Test 1 - matrix_divided
-============================================
-
-
-Using 2-matrix_divided.py
----------------------
-
-This is an example text file in reStructuredText format. First import
-``matrix_divided`` from the ``task 1`` task:
-
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
-
-
-unique test:
-    >>> matrix_divided([[1, 2], [3, 4]], 2)
-    [[0.5, 1.0], [1.5, 2.0]]
-
-unique test:
-    >>> matrix_divided(None, 1)
+    
+Failing Test: passing in string in matrix
+    >>> matrix_divided([[1, "school"], [3, 4]], 2)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-unique test:
-    >>> matrix_divided([[1, "school"], [3, 4]], 2)
-    Traceback (most recent call last):
-    ...
-    TypeError: unsupported operand type(s) for /: 'str' and 'int'
-
-unique test:
+Failing Test: matrix is not symmetrical:
     >>> matrix_divided([[1],[2,3]], 2)
     Traceback (most recent call last):
     ...
     TypeError: Each row of the matrix must have the same size
 
-unique test:
+Failing Test: divider is not a number
     >>> matrix_divided([[1]], 'div')
     Traceback (most recent call last):
     ...
-    TypeError: div must be an number
+    TypeError: div must be a number
 
-unique test:
+Failing Test: divider is 0
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
 
-unique test:
+Failing Test: passing empty list as matrix
     >>> matrix_divided([], 1)
     Traceback (most recent call last):
     ...
     IndexError: list index out of range
+
+Failing Test: passing 'None' object as matrix
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'NoneType' object is not iterable
+
+
+Successful Test
+    >>> matrix_divided([[1, 2], [3, 4]], 2)
+    [[0.5, 1.0], [1.5, 2.0]]

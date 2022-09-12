@@ -1,34 +1,53 @@
-#!/usr/bin/python3
-"""
-function that divides all elements of a matrix
-
-"""
+============================================
+            Test 1 - matrix_divided
+============================================
 
 
-def matrix_divided(matrix, div):
-    """
-    this function divides all elements of matrix
-    """
+Using 2-matrix_divided.py
+---------------------
 
-    if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix (list of lists) \
-                        of integers/floats")
+This is an example text file in reStructuredText format. First import
+``matrix_divided`` from the ``task 1`` task:
 
-    div_type = type(div)
-    if div_type is not int and div_type is not float:
-        raise TypeError("div must be a number")
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-    len_rows = []
-    for row in matrix:
-        len_rows.append(len(row))
-    if not all(elem == len_rows[0] for elem in len_rows):
-        raise TypeError("Each row of the matrix must have the same size")
 
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
+unique test:
+    >>> matrix_divided([[1, 2], [3, 4]], 2)
+    [[0.5, 1.0], [1.5, 2.0]]
 
-    new_matrix = []
-    for row in matrix:
-        new_matrix.append([round(val/div, 2) for val in row])
+unique test:
+    >>> matrix_divided(None, 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    return new_matrix
+unique test:
+    >>> matrix_divided([[1, "school"], [3, 4]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+unique test:
+    >>> matrix_divided([[1],[2,3]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+unique test:
+    >>> matrix_divided([[1]], 'div')
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be an number
+
+unique test:
+    >>> matrix_divided([[1]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+unique test:
+    >>> matrix_divided([], 1)
+    Traceback (most recent call last):
+    ...
+    IndexError: list index out of range
