@@ -1,14 +1,3 @@
-============================================
-            Test 1 - matrix_divided
-============================================
-
-
-Using 2-matrix_divided.py
----------------------
-
-This is an example text file in reStructuredText format. First import
-``matrix_divided`` from the ``task 1`` task:
-
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 unique test:
