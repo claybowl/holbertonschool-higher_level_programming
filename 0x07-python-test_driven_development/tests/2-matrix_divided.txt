@@ -40,6 +40,7 @@ unique test:
     ...
     TypeError: div must be an number
 
+unique test:
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ...
