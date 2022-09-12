@@ -14,8 +14,9 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) \
                         of integers/floats")
 
-    if not isinstance(div, (float, int)):
-        raise TypeError("div must be an number")
+    div_type = type(div)
+    if div_type is not int and div_type is not float:
+        raise TypeError("div must be a number")
 
     len_rows = []
     for row in matrix:
