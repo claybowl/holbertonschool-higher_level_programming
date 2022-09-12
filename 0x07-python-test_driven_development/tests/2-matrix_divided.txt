@@ -40,11 +40,10 @@ unique test:
     ...
     TypeError: div must be an number
 
-unique test:
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ...
-    NameError: name 'matrix_divided' is not defined
+    ZeroDivisionError: division by zero
 
 unique test:
     >>> matrix_divided([], 1)
