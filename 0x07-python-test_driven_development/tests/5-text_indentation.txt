@@ -1,15 +1,15 @@
 ============================================
-            Test - say_my_name
+            Test - text_indention
 ============================================
 
 
-Using 3-say_my_name.py
+Using 5-text_indention.py
 ---------------------
 
 This is an example text file in reStructuredText format. First import
-``say_my_name`` from the ``3-say_my_name`` task:
+``text_indentation`` from the ``5-text_indentation`` task:
 
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 unique test:
 

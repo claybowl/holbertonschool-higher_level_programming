@@ -1,15 +1,15 @@
 ============================================
-            Test - say_my_name
+            Test - print_square
 ============================================
 
 
-Using 3-say_my_name.py
+Using 4-print_square.py
 ---------------------
 
 This is an example text file in reStructuredText format. First import
-``say_my_name`` from the ``3-say_my_name`` task:
+``print_square`` from the ``5-print_square`` task:
 
-    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> print_square = __import__('4-print_square').print_square
 
 unique test:
 
