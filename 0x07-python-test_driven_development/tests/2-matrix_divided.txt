@@ -44,4 +44,4 @@ unique test:
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ...
-    NameError: name 'matrix_divided' is not defined
+    ZeroDivisionError: division by zero
