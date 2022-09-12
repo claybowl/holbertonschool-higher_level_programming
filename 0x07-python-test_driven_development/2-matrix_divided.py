@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-""" divide a matrix by div"""
+"""
+divide a matrix by div
+"""
 
 
 def matrix_divided(matrix, div):
-    """ much error checking, then maths"""
+    """ 
+    much error checking, then maths
+    """
 
     for row in matrix:
         for val in row:
             val_type = type(val)
             if val_type is not int and val_type is not float:
                 raise TypeError("matrix must be a matrix (list of lists) \
-of integers/floats")
+                                of integers/floats")
 
     matrix_row_size = len(matrix[0])
     for row in matrix:
