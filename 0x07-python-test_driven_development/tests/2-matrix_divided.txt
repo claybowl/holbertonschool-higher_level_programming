@@ -44,7 +44,3 @@ unique test:
     Traceback (most recent call last):
     ...
     ZeroDivisionError: division by zero
-
-unique test:
-    >>> matrix_divided([], 1)
-    []
