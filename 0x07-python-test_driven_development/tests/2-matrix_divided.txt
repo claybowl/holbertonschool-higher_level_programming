@@ -47,6 +47,4 @@ unique test:
 
 unique test:
     >>> matrix_divided([], 1)
-    Traceback (most recent call last):
-    ...
-    NameError: name 'matrix_divided' is not defined
+    []
