@@ -20,7 +20,7 @@ unique test:
     >>> matrix_divided(None, 1)
     Traceback (most recent call last):
     ...
-    NameError: name 'matrix_divided' is not defined
+    TypeError: matrix must be a matrix (list of lists)                         of integers/floats
 
 unique test:
     >>> matrix_divided([[1, "school"], [3, 4]], 2)
