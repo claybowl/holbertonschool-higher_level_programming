@@ -4,6 +4,7 @@ divide a matrix by div
 """
 
 
+
 def matrix_divided(matrix, div):
     """ 
     much error checking, then maths
