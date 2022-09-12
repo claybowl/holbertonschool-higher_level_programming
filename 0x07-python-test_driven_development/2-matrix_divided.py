@@ -6,7 +6,7 @@ function that divides all elements of a matrix
 
 
 def matrix_divided(matrix, div):
-    """ 
+    """
     this function divides all elements of matrix
     """
 
@@ -15,7 +15,7 @@ def matrix_divided(matrix, div):
             val_type = type(val)
             if val_type is not int and val_type is not float:
                 raise TypeError("matrix must be a matrix (list of lists) \
-                                of integers/floats")
+of integers/floats")
 
     matrix_row_size = len(matrix[0])
     for row in matrix:
