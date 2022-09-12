@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-divide a matrix by div
-"""
+function that divides all elements of a matrix
 
+"""
 
 
 def matrix_divided(matrix, div):
     """ 
-    much error checking, then maths
+    this function divides all elements of matrix
     """
 
     for row in matrix:
