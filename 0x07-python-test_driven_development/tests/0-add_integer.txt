@@ -11,18 +11,6 @@ This is an example text file in reStructuredText format. First import
 
     >>> add_integer = __import__("0-add_integer").add_integer
 
-test from main 1:
-    >>> add_integer(1,2)
-    3
-
-test from main 2:
-    >>> add_integer(100, -2)
-    98
-
-test from main 3:
-    >>> add_integer(2)
-    100
-
 test from main 4:
     >>> add_integer(100.3, -2)
     98
