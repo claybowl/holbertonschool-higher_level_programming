@@ -30,7 +30,7 @@ unique test:
 unique test:
     >>> text_indentation("Hey: this works too")
     Hey:
-    
+    <BLANKLINE>
     this works too
 
 unique test:
