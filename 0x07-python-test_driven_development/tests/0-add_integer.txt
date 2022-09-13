@@ -74,3 +74,6 @@ unique test 9:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+>>> add_integer(True, 5)
+6
