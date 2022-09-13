@@ -20,6 +20,10 @@ unique test:
     My name is Clayton
 
 unique test:
+    >>> say_my_name("R2","D2")
+    My name is R2 D2
+
+unique test:
     >>> say_my_name("Clayton", 33)
     Traceback (most recent call last):
     ...
@@ -40,5 +44,11 @@ unique test:
 unique test:
     >>> say_my_name(33, "Clayton")
     Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+unique test:
+    >>> say_my_name(33, 66)
+    Traceback (most recent call last):   
     ...
     TypeError: first_name must be a string
