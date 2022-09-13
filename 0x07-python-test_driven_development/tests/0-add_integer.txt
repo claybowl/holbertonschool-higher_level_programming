@@ -68,3 +68,9 @@ unique test 7:
 unique test 8:
     >>> add_integer(10, 0.98869039757839208585782092847592)
     10
+
+unique test 9:
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
