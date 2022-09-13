@@ -18,13 +18,13 @@ unique test:
 unique test:
     >>> text_indentation("I'm up here. Now I'm down here")
     I'm up here.
-    
+    <BLANKLINE>
     Now I'm down here
 
 unique test:
     >>> text_indentation("Same stuff? Different Delimeter")
     Same stuff?
-    
+    <BLANKLINE>
     Different Delimeter
 
 unique test:
