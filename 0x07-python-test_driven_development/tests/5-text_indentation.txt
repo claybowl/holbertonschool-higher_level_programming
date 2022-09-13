@@ -12,9 +12,34 @@ This is an example text file in reStructuredText format. First import
     >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 unique test:
+    >>> text_indentation("This is a string that goes on and on")
+    This is a string that goes on and on
+
+unique test:
+    >>> text_indentation("I'm up here. Now I'm down here")
+    I'm up here.
+    
+    Now I'm down here
+
+unique test:
+    >>> text_indentation("Same stuff? Different Delimeter")
+    Same stuff?
+    
+    Different Delimeter
+
+unique test:
+    >>> text_indentation("Hey: this works too")
+    Hey:
+    
+    this works too
 
 unique test:
 
+
 unique test:
+
+
+unique test:
+
 
 unique test:
