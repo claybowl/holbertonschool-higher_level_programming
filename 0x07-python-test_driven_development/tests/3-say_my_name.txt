@@ -55,6 +55,6 @@ unique test:
 
 unique test:
     >>> say_my_name(33, 66)
-    Traceback (most recent call last):   
+    Traceback (most recent call last):
     ...
-    TypeError: first_name must be a string
+    NameError: name 'D2' is not defined
