@@ -11,7 +11,7 @@ This is an example text file in reStructuredText format. First import
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
-
+unique 
 unique test:
     >>> say_my_name("R2","D2")
     My name is R2 D2
@@ -39,12 +39,6 @@ unique test:
     Traceback (most recent call last):   
     ...
     TypeError: first_name must be a string
-
-unique test:
-    >>> say_my_name(33, 66)
-    Traceback (most recent call last):
-    ...
-    NameError: name 'D2' is not defined
 
 unique test:
     >>> say_my_name(None)
