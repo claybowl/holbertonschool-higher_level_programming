@@ -52,3 +52,9 @@ unique test 3:
     Traceback (most recent call last):
     ...
     NameError: name 'hi' is not defined
+
+unique test 4:
+    >>> add_integer(1, int("Hi"))
+    Traceback (most recent call last):
+    ...
+    ValueError: invalid literal for int() with base 10: 'Hi'
