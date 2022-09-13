@@ -27,5 +27,3 @@ class TestMaxInteger(unittest.TestCase):
         self.assertRaises(TypeError, max_integer, test)
 
 
-if __name__ == '__main__':
-    unittest.main()
