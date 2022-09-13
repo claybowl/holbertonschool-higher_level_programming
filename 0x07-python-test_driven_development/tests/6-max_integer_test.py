@@ -8,7 +8,6 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """TestCase for the max_integer function."""
-
     def single_int_test(self):
         """tests single integer list"""
         v1 = [36]
@@ -24,7 +23,7 @@ class TestMaxInteger(unittest.TestCase):
         """testing for non integer"""
         v1 = [2, 3, 5, "hi", 13, 21, 34]
         test = max_integer(v1)
-        self.assertEqual(test, 34)
+        self.assertRaises(TypeError, max_integer, test)
 
 
 if __name__ == '__main__':
