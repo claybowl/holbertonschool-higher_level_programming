@@ -64,3 +64,7 @@ unique test 7:
     Traceback (most recent call last):
     ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+unique test 8:
+    >>> add_integer(10, 0.98869039757839208585782092847592)
+    10
