@@ -12,14 +12,6 @@ This is an example text file in reStructuredText format. First import
     >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 unique test:
-    >>> say_my_name("Clayton", "Christian")
-    My name is Clayton Christian
-
-unique test:
-    >>> say_my_name("Clayton")
-    My name is Clayton
-
-unique test:
     >>> say_my_name("R2","D2")
     My name is R2 D2
 
