@@ -39,12 +39,6 @@ test from main 6:
     ...
     TypeError: a must be an integer
 
-test from main 7:
-    >>> add_integer(none)
-    Traceback (most recent call last):
-    ...
-    NameError: name 'none' is not defined
-
 unique test 1:
     >>> add_integer(2, 3, 4)
     Traceback (most recent call last):
