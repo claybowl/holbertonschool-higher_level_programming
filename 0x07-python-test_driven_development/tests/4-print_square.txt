@@ -12,9 +12,33 @@ This is an example text file in reStructuredText format. First import
     >>> print_square = __import__('4-print_square').print_square
 
 unique test:
+    >>> print_square(5)
+    #####
+    #####
+    #####
+    #####
+    ####
 
 unique test:
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
 
 unique test:
+    >>> print_square("big")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
 
 unique test:
+    >>> print_square(5, 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() takes 1 positional argument but 2 were given
+
+unique test:
+    >>> print_square(5.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
