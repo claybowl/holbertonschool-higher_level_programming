@@ -47,12 +47,6 @@ unique test 2:
     ...
     TypeError: a must be an integer
 
-unique test 3:
-    >>> add_integer(hi, "bye")
-    Traceback (most recent call last):
-    ...
-    NameError: name 'hi' is not defined
-
 unique test 4:
     >>> add_integer(1, int("Hi"))
     Traceback (most recent call last):
