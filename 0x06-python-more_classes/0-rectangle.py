@@ -2,9 +2,6 @@
 """Writing a class that defines a rectangle by width and height"""
 
 
-from xml.etree.ElementPath import prepare_parent
-
-
 class Rectangle():
 	def __init__(self, width=0, height=0):
 		"""Initialize weight and height attributes"""
