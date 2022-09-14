@@ -19,8 +19,8 @@ class Rectangle:
             return ''
         rec_str = ''
         for y in range(self.__height):
-			for x in range(self.__width):
-				rec_str += '#'
+            for x in range(self.__width):
+                rec_str += '#'
             rec_str += '\n'
         return rec_str[:-1]
 
