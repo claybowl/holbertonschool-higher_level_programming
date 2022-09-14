@@ -4,14 +4,14 @@ rectangle by width and height
 """
 
 
-class Rectangle():
+class Rectangle:
     """Rectangle class defined by width and height.
     """
     def __init__(self, width=0, height=0):
         """Initialize weight and height attributes
         """
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self, value):
