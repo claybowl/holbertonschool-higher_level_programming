@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""Writing a class that defines a rectangle by width and height"""
+"""Writing a class that defines a 
+rectangle by width and height
+"""
 
 
 class Rectangle():
+	"""Rectangle class defined by width and height."""
+	
 	def __init__(self, width=0, height=0):
 		"""Initialize weight and height attributes"""
 		self.width = width
