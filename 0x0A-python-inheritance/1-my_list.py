@@ -7,6 +7,7 @@ class 'list'
 
 class MyList(list):
     """List with attributes of parent class"""
+
     def __init__(self):
         """Initiating list"""
 
