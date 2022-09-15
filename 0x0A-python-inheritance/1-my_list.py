@@ -10,6 +10,7 @@ class MyList(list):
 
     def __init__(self):
         """Initiating list"""
+        super().__init__(self)
 
     def print_sorted(self):
         """Prints list in ascending order"""
