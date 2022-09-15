@@ -6,9 +6,7 @@ an instance of the specified class. Otherwise False
 
 
 def is_same_class(obj, a_class):
-    """Identifies class instance"""
+    """Discovers if obj is an instance of a_class"""
+    pass
 
-    if isinstance(obj, a_class):
-        print(True)
-	if not isinstance(obj, a_class):
-		print(False)
+    return True if type(obj) is a_class else False
