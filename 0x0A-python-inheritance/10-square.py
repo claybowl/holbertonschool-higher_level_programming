@@ -25,4 +25,3 @@ class Square(Rectangle):
 
     def area(self):
         """area pf Square"""
-
