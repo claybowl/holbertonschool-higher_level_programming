@@ -3,11 +3,12 @@
 sub-class of Rectangle
 """
 
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-class def Square(Rectangle):
+class Square(Rectangle):
     """Square Class"""
 
     def __init__(self, size):
