@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Creates class Square which is 
+"""
+Creates class Square which is 
 sub-class of Rectangle
 """
 
