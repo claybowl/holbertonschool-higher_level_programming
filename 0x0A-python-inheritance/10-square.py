@@ -19,9 +19,9 @@ class Square(Rectangle):
         self.__size = size
 
     def __str__(self):
-        """Returns a formatted string."""
+        """Returns string of super class"""
 
-        return str("[Square] {}/{}".format(self.__size, self.__size))
+        return super().__str__()
 
     def area(self):
         """area of Square"""
