@@ -4,7 +4,6 @@ Creates class Square which is
 sub-class of Rectangle
 """
 
-
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
@@ -25,6 +24,6 @@ class Square(Rectangle):
         return super().__str__()
 
     def area(self):
-        """area pf Square"""
+        """area of Square"""
 
         return self.__size ** 2
