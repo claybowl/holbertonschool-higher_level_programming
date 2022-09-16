@@ -21,8 +21,7 @@ class Square(Rectangle):
     def __str__(self):
         """Returns a formatted string."""
 
-        return str("[Square] {}/{}".format(self.__width, self.__height))
-
+        return str("[Square] {}/{}".format(self.__size, self.__size))
 
     def area(self):
         """area of Square"""
