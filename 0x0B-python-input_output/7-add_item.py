@@ -18,7 +18,7 @@ my_list = []
 
 
 if os.path.exists(my_file):
-    my_list = load_from_json_file(file)
+    my_list = load_from_json_file(my_file)
 
 for elem in range(1, len(sys.argv)):
     my_list.append(sys.argv[elem])
