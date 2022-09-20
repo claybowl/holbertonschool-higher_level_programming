@@ -25,4 +25,3 @@ class Student:
             return my_dict
 
         return self.__dict__.copy()
-
