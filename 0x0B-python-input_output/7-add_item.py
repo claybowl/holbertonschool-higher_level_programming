@@ -16,6 +16,7 @@ load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 my_file = "add_item.json"
 my_list = []
 
+
 if os.path.exists(my_file) and os.path.getsize(my_file) > 0:
     my_list = load_from_json_file(my_file)
 
