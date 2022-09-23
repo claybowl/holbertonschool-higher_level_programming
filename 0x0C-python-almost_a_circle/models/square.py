@@ -2,6 +2,8 @@
 """
 This file contains the square class, which inherits the rectangle class
 """
+
+
 from ctypes import sizeof
 
 
