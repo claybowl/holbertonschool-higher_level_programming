@@ -37,14 +37,10 @@ class Rectangle(Base):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
 
-        if self.__height == 0 or self.__width == 0:
-            return ''
-        rec_str = ''
-        for y in range(self.__height):
-            for x in range(self.__width):
-                rec_str += '#'
-            rec_str += '\n'
-        return rec_str[:-1]
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * self.__width)
 
     def update(self, *args, **kwargs):
         """update rectangle class"""
