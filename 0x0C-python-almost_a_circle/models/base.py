@@ -49,8 +49,8 @@ class Base:
     def load_from_file(cls):
         """Returns a list of object instances created fromjson file <class>.json"""
 
-        jsonfilename = cls.__name__ + ".json"
         try:
+            jsonfilename = cls.__name__ + ".json"
             with open(jsonfilename, "r") as jsonfile:
                 jsonlist = cls.from_json_string(jsonfile.read())
             objectlist = []
@@ -66,7 +66,8 @@ class Base:
 
         if list_dictionaries is None or len(list_dictionaries) < 1:
             return "[]"
-        return json.dumps(list_dictionaries)
+        else:
+            return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
@@ -74,7 +75,8 @@ class Base:
         """
         if json_string is None or len(json_string) < 1:
             return []
-        return json.loads(json_string)
+        else:
+            return json.loads(json_string)
 
 def integer_validator(value, num):
     """validate that num is an integer"""
