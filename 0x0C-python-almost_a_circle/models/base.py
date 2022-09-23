@@ -51,8 +51,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Creates and returns an object instance defined by **dictionary kwargs
-        """
+        """Creates and returns an object instance defined by **dictionary kwargs"""
 
         if cls.__name__ == "Square":
             dummy = cls(1)
@@ -73,11 +72,11 @@ class Base:
                 for object in jsonlist:
                     objectlist.append(cls.create(**object))
             return objectlist
-        except:
-            return []
+        return []
 
 def integer_validator(value, num):
     """validate that num is an integer"""
+
 
     if type(value) is not str:
         raise TypeError("value passed to validate_int must be string")
@@ -88,6 +87,7 @@ def integer_validator(value, num):
 
 def no_neg_validator(value, num):
     """validate that num is a 0 or positive integer"""
+
 
     if type(value) is not str:
         raise TypeError("value passed to validate_not_neg must be string")
