@@ -47,27 +47,36 @@ class Rectangle(Base):
         return rec_str[:-1]
 
     def update(self, *args, **kwargs):
-        """
-        Update the rectangle with new arbitrary properties
-        """
-        newargs = [self.id, self.__width, self.__height, self.__x, self.__y]
-        if len(args) > 0:
-            for i in range(len(args)):
-                newargs[i] = args[i]
+        """update rectangle class"""
+
+        if args is not None and len(args) != 0:
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.__width = arg
+                elif i == 2:
+                    self.__height = arg
+                elif i == 3:
+                    self.__x = arg
+                elif i == 4:
+                    self.__y = arg
+                i += 1
         else:
-            for i in kwargs:
-                if i == "id":
-                    newargs[0] = kwargs[i]
-                if i == "width":
-                    newargs[1] = kwargs[i]
-                if i == "height":
-                    newargs[2] = kwargs[i]
-                if i == "x":
-                    newargs[3] = kwargs[i]
-                if i == "y":
-                    newargs[4] = kwargs[i]
-        self.__init__(
-            newargs[1], newargs[2], newargs[3], newargs[4], newargs[0])
+            if kwargs is not None and len(kwargs) != 0:
+                for key, value in kwargs.items():
+                    """print(f"{key}:{value}")"""
+                    if key == "id":
+                        self.id = value
+                    elif key == "width":
+                        self.width = value
+                    elif key == "height":
+                        self.height = value
+                    elif key == "x":
+                        self.x = value
+                    elif key == "y":
+                        self.y = value
 
     @property
     def width(self):
