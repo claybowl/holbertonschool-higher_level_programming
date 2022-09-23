@@ -15,7 +15,6 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes class Rectangle"""
 
-        super().__init__(id)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
@@ -25,6 +24,7 @@ class Rectangle(Base):
         self.no_neg_validator("y", y)
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     def __str__(self):
         """Returns an informal and nicely printable string"""
