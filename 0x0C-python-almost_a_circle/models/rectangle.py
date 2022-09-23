@@ -90,10 +90,10 @@ class Rectangle(Base):
     def width(self, width):
         """Sets the width of a rectangle instance"""
 
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
+        ##if type(width) is not int:
+        ##    raise TypeError("width must be an integer")
+        ##if width < 0:
+        ##    raise ValueError("width must be >= 0")
         integer_validator("width", width)
         self.__width = width
 
@@ -101,10 +101,10 @@ class Rectangle(Base):
     def height(self, height):
         """Sets the height of a Rectangle instance"""
 
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height < 0:
-            raise ValueError("height must be >= 0")
+        ##if type(height) is not int:
+        ##    raise TypeError("height must be an integer")
+        ##if height < 0:
+        ##    raise ValueError("height must be >= 0")
         integer_validator("height", height)
         self.__height = height
 
