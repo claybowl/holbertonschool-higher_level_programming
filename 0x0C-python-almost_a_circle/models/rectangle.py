@@ -4,9 +4,6 @@ Class rectangle module
 """
 
 
-from re import X
-
-
 Base = __import__("models.base").base.Base
 integer_validator = __import__("models.base").base.integer_validator
 no_neg_validator = __import__("models.base").base.no_neg_validator
@@ -32,20 +29,10 @@ class Rectangle(Base):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
 
-        if self.__height == 0 or self.__width == 0:
-            return ''
-        rec_str = ''
-        for y in range(self.__height):
-            for x in range(self.__width):
-                rec_str += '#'
-            rec_str += '\n'
-        return rec_str[:-1]
+        s = "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def __repr__(self):
-        """Return a string representatio of rectangle
-        to recreate using eval()"""
-
-        return "Rectangle({}, {})".format(self.__width, self.__height)
+        return s
 
     @property
     def width(self):
