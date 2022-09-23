@@ -27,12 +27,24 @@ class Rectangle(Base):
         self.__y = y
 
     def __str__(self):
-        """Returns an informal and nicely printable string representation
-        of a Rectangle instance, filled with the '#' character."""
+        """Returns an informal and nicely printable string"""
 
         s = "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
         return s
+
+    def display(self):
+        """Returns an informal and nicely printable string representation
+        of a Rectangle instance, filled with the '#' character."""
+
+        if self.__height == 0 or self.__width == 0:
+            return ''
+        rec_str = ''
+        for y in range(self.__height):
+            for x in range(self.__width):
+                rec_str += '#'
+            rec_str += '\n'
+        return rec_str[:-1]
 
     @property
     def width(self):
