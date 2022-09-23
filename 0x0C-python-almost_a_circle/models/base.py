@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 """Module base.py
-Base class for for all project classes
-
+Base class for for all modules
 """
-
 
 import json
 
