@@ -14,6 +14,7 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes class Rectangle"""
+
         super().__init__(id)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
@@ -86,7 +87,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        integer_validator("x", value)
+        no_neg_validator("x", value)
         self.__x = value
 
     @y.setter
@@ -97,6 +98,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
+        no_neg_validator("y", value)
         self.__y = value
 
     def area(self):
