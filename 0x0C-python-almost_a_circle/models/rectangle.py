@@ -59,25 +59,26 @@ class Rectangle(Base):
         return self.__height
 
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """Sets the width of a rectangle instance"""
 
-        if type(value) is not int:
+        if type(width) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
+        if width < 0:
             raise ValueError("width must be >= 0")
-        integer_validator("width", value)
-        self.__width = value
+        integer_validator("width", width)
+        self.__width = width
 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """Sets the height of a Rectangle instance"""
 
-        if type(value) is not int:
+        if type(height) is not int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if height < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        integer_validator("height", height)
+        self.__height = height
 
     @property
     def x(self):
@@ -92,26 +93,26 @@ class Rectangle(Base):
         return self.__y
 
     @x.setter
-    def x(self, value):
+    def x(self, num):
         """Sets the x attribute"""
 
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
-        no_neg_validator("x", value)
-        self.__x = value
+        ##if type(value) is not int:
+        ##    raise TypeError("x must be an integer")
+        ##if value < 0:
+        ##    raise ValueError("x must be >= 0")
+        no_neg_validator("x", num)
+        self.__x = num
 
     @y.setter
-    def y(self, value):
+    def y(self, num):
         """Sets the y attribute"""
 
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        no_neg_validator("y", value)
-        self.__y = value
+        ## if type(value) is not int:
+        ##    raise TypeError("y must be an integer")
+        ##if value < 0:
+        ##    raise ValueError("y must be >= 0")
+        no_neg_validator("y", num)
+        self.__y = num
 
     def area(self):
         """Calculates the area of the rectangle"""
