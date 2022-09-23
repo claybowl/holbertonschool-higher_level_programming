@@ -4,7 +4,7 @@ Class rectangle module
 """
 
 
-Base = __import__("models.base").base.Base
+from models.base import Base
 integer_validator = __import__("models.base").base.integer_validator
 no_neg_validator = __import__("models.base").base.no_neg_validator
 
