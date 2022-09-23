@@ -73,7 +73,8 @@ class Base:
                 for object in jsonlist:
                     objectlist.append(cls.create(**object))
             return objectlist
-        return []
+        except:
+            return []
 
     def integer_validator(self, value, num):
         """validate that num is an integer"""
