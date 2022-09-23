@@ -148,3 +148,8 @@ class Rectangle(Base):
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def to_dictionary(self):
+        """return dictionary"""
+        return {'id': self.id, 'width': self.width, 'height':
+                self.height, 'x': self.x, 'y': self.y}
