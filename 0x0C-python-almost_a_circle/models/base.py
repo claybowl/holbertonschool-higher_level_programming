@@ -44,6 +44,7 @@ class Base:
     def from_json_string(json_string):
         """Returns the list of the json string representation
         """
+
         if json_string is None or len(json_string) < 1:
             return []
         return json.loads(json_string)
@@ -52,6 +53,7 @@ class Base:
     def create(cls, **dictionary):
         """Creates and returns an object instance defined by **dictionary kwargs
         """
+
         if cls.__name__ == "Square":
             dummy = cls(1)
         else:
@@ -83,7 +85,6 @@ def integer_validator(value, num):
         raise TypeError(f"{value} must be an integer")
     if num <= 0:
         raise ValueError(f"{value} must be > 0")
-
 
 def no_neg_validator(value, num):
     """validate that num is a 0 or positive integer"""
