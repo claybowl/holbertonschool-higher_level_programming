@@ -51,7 +51,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Creates and returns an object instance defined by **dictionary kwargs"""
+        """Creates and returns an object instance
+        defined by **dictionary kwargs"""
 
         if cls.__name__ == "Square":
             dummy = cls(1)
@@ -62,7 +63,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Returns a list of object instances created fromjson file <class>.json"""
+        """Returns a list of object instances created fromjson
+        file <class>.json"""
 
         jsonfilename = cls.__name__ + ".json"
         try:
@@ -74,9 +76,9 @@ class Base:
             return objectlist
         return []
 
+
 def integer_validator(value, num):
     """validate that num is an integer"""
-
 
     if type(value) is not str:
         raise TypeError("value passed to validate_int must be string")
@@ -85,9 +87,9 @@ def integer_validator(value, num):
     if num <= 0:
         raise ValueError(f"{value} must be > 0")
 
+
 def no_neg_validator(value, num):
     """validate that num is a 0 or positive integer"""
-
 
     if type(value) is not str:
         raise TypeError("value passed to validate_not_neg must be string")
