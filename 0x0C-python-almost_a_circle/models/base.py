@@ -76,7 +76,6 @@ class Base:
             return objectlist
         return []
 
-
     def integer_validator(self, value, num):
         """validate that num is an integer"""
 
@@ -86,7 +85,6 @@ class Base:
             raise TypeError(f"{value} must be an integer")
         if num <= 0:
             raise ValueError(f"{value} must be > 0")
-
 
     def no_neg_validator(self, value, num):
         """validate that num is a 0 or positive integer"""
