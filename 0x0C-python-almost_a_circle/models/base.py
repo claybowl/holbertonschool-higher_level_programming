@@ -74,7 +74,7 @@ class Base:
         except FileNotFoundError:
             return []
 
-    def integer_validator(self, value, num):
+    def integer_validator(value, num):
         """validate that num is an integer"""
 
         if type(value) is not str:
@@ -84,7 +84,7 @@ class Base:
         if num <= 0:
             raise ValueError(f"{value} must be > 0")
 
-    def no_neg_validator(self, value, num):
+    def no_neg_validator(value, num):
         """validate that num is a 0 or positive integer"""
 
         if type(value) is not str:
