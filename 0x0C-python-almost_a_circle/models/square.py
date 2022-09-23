@@ -10,7 +10,7 @@ from ctypes import sizeof
 
 
 Rectangle = __import__("models.rectangle").rectangle.Rectangle
-integer_validator = __import__("models.base").base.int_validator
+integer_validator = __import__("models.base").base.integer_validator
 
 
 class Square(Rectangle):
@@ -22,7 +22,7 @@ class Square(Rectangle):
         """
         Initialize the square
         """
-        # validate_int("size", size)
+        integer_validator("size", size)
         super().__init__(size, size, x, y, id)
 
     @property
