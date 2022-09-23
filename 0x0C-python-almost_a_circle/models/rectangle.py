@@ -46,6 +46,29 @@ class Rectangle(Base):
             rec_str += '\n'
         return rec_str[:-1]
 
+    def update(self, *args, **kwargs):
+        """
+        Update the rectangle with new arbitrary properties
+        """
+        newargs = [self.id, self.__width, self.__height, self.__x, self.__y]
+        if len(args) > 0:
+            for i in range(len(args)):
+                newargs[i] = args[i]
+        else:
+            for i in kwargs:
+                if i == "id":
+                    newargs[0] = kwargs[i]
+                if i == "width":
+                    newargs[1] = kwargs[i]
+                if i == "height":
+                    newargs[2] = kwargs[i]
+                if i == "x":
+                    newargs[3] = kwargs[i]
+                if i == "y":
+                    newargs[4] = kwargs[i]
+        self.__init__(
+            newargs[1], newargs[2], newargs[3], newargs[4], newargs[0])
+
     @property
     def width(self):
         """Retrieves the width of a Rectangle instance"""
