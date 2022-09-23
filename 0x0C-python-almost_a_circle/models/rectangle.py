@@ -4,13 +4,25 @@ Class rectangle module
 """
 
 
+Base = __import__("models.base").base.Base
+integer_validator = __import__("models.base").base.integer_validator
+no_neg_validator = __import__("models.base").base.no_neg_validator
+
 class Rectangle(Base):
     """Class for Rectangle inheriting from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes class Rectangle"""
+        super().__init__(id)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
+        self.no_neg_validator("x", x)
+        self.no_neg_validator("y", y)
+        self.__x = x
+        self.__y = y
 
     def __str__(self):
         """Returns an informal and nicely printable string representation
