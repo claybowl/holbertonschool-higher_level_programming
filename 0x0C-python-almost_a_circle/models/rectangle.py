@@ -4,6 +4,9 @@ Class rectangle module
 """
 
 
+from re import X
+
+
 Base = __import__("models.base").base.Base
 integer_validator = __import__("models.base").base.integer_validator
 no_neg_validator = __import__("models.base").base.no_neg_validator
@@ -57,25 +60,58 @@ class Rectangle(Base):
         return self.__height
 
     @width.setter
-    def width(self, width):
+    def width(self, value):
         """Sets the width of a rectangle instance"""
 
-        if type(width) is not int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if width < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        integer_validator("width", width)
-        self.__width = width
+        integer_validator("width", value)
+        self.__width = value
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """Sets the height of a Rectangle instance"""
 
-        if type(height) is not int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
-        if height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = height
+        self.__height = value
+
+    @property
+    def x(self):
+        """Retrieves the x attribute"""
+
+        return self.__x
+
+    @property
+    def y(self):
+        """Retrieves the y attribute"""
+
+        return self.__y
+
+    @x.setter
+    def x(self, value):
+        """Sets the x attribute"""
+
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        integer_validator("x", value)
+        self.__x = value
+
+    @y.setter
+    def y(self, value):
+        """Sets the y attribute"""
+
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
 
     def area(self):
         """Calculates the area of the rectangle"""
