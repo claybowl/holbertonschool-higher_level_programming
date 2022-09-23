@@ -5,8 +5,6 @@ Base class for for all modules
 
 
 import json
-import os
-import csv
 
 
 class Base:
@@ -29,8 +27,7 @@ class Base:
 
         if list_dictionaries is None or len(list_dictionaries) < 1:
             return "[]"
-        else:
-            return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -49,8 +46,7 @@ class Base:
         """
         if json_string is None or len(json_string) < 1:
             return []
-        else:
-            return json.loads(json_string)
+        return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
@@ -67,8 +63,8 @@ class Base:
     def load_from_file(cls):
         """Returns a list of object instances created fromjson file <class>.json"""
 
+        jsonfilename = cls.__name__ + ".json"
         try:
-            jsonfilename = cls.__name__ + ".json"
             with open(jsonfilename, "r") as jsonfile:
                 jsonlist = cls.from_json_string(jsonfile.read())
                 objectlist = []
