@@ -8,6 +8,7 @@ Base = __import__("models.base").base.Base
 integer_validator = __import__("models.base").base.integer_validator
 no_neg_validator = __import__("models.base").base.no_neg_validator
 
+
 class Rectangle(Base):
     """Class for Rectangle inheriting from Base"""
 
