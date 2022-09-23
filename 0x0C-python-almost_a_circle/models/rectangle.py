@@ -16,10 +16,12 @@ class Rectangle(Base):
         """initializes class Rectangle"""
 
         super().__init__(id)
-
+        integer_validator("width", width)
+        integer_validator("height", height)
         self.__width = width
         self.__height = height
-
+        no_neg_validator("x", x)
+        no_neg_validator("y", y)
         self.__x = x
         self.__y = y
 
