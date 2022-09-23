@@ -53,9 +53,9 @@ class Base:
             jsonfilename = cls.__name__ + ".json"
             with open(jsonfilename, "r") as jsonfile:
                 jsonlist = cls.from_json_string(jsonfile.read())
-            objectlist = []
-            for object in jsonlist:
-                objectlist.append(cls.create(**object))
+                objectlist = []
+                for object in jsonlist:
+                    objectlist.append(cls.create(**object))
             return objectlist
         except:
             return []
