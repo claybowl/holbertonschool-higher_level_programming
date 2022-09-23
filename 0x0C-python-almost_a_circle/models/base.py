@@ -42,8 +42,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Returns the list of the json string representation
-        """
+        """Returns the list of the json string representation"""
 
         if json_string is None or len(json_string) < 1:
             return []
@@ -52,7 +51,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Creates and returns an object instance
-        defined by **dictionary kwargs"""
+            defined by **dictionary kwargs"""
 
         if cls.__name__ == "Square":
             dummy = cls(1)
@@ -64,7 +63,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Returns a list of object instances created fromjson
-        file <class>.json"""
+            file <class>.json"""
 
         jsonfilename = cls.__name__ + ".json"
         try:
