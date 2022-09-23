@@ -23,6 +23,15 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Turns list of dictionaries into JSON string"""
+
+        if list_dictionaries is None or len(list_dictionaries) < 1:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Saves JSON string to file"""
@@ -33,6 +42,15 @@ class Base:
                 for i in list_objs:
                     emptylist.append(i.to_dictionary())
             jsonfile.write(cls.to_json_string(emptylist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the json string representation
+        """
+        if json_string is None or len(json_string) < 1:
+            return []
+        else:
+            return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
@@ -59,24 +77,6 @@ class Base:
             return objectlist
         except:
             return []
-
-    @staticmethod
-    def to_json_string(list_dictionaries):
-        """Turns list of dictionaries into JSON string"""
-
-        if list_dictionaries is None or len(list_dictionaries) < 1:
-            return "[]"
-        else:
-            return json.dumps(list_dictionaries)
-
-    @staticmethod
-    def from_json_string(json_string):
-        """Returns the list of the json string representation
-        """
-        if json_string is None or len(json_string) < 1:
-            return []
-        else:
-            return json.loads(json_string)
 
 def integer_validator(value, num):
     """validate that num is an integer"""
