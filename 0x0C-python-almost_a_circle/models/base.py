@@ -35,7 +35,7 @@ class Base:
     def save_to_file(cls, list_objs):
         """Saves JSON string to file"""
 
-        with open(cls.__name__ + ".json", 'w') as jsonfile:
+        with open(cls.__name__ + ".json", 'w+') as jsonfile:
             emptylist = []
             if list_objs is not None and len(list_objs) > 0:
                 for i in list_objs:
@@ -78,7 +78,7 @@ def integer_validator(value, num):
     """validate that num is an integer"""
 
     if type(value) is not str:
-        raise TypeError("value passed to validate_int must be string")
+        raise TypeError("value passed to integer_validator must be string")
     if type(num) is not int:
         raise TypeError(f"{value} must be an integer")
     if num <= 0:
@@ -88,7 +88,7 @@ def no_neg_validator(value, num):
     """validate that num is a 0 or positive integer"""
 
     if type(value) is not str:
-        raise TypeError("value passed to validate_not_neg must be string")
+        raise TypeError("value passed to no_neg_validator must be string")
     if type(num) is not int:
         raise TypeError(f"{value} must be an integer")
     if num < 0:
