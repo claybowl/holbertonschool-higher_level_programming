@@ -83,7 +83,6 @@ class Rectangle(Base):
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        integer_validator("width", value)
         self.__width = value
 
     @height.setter
@@ -94,7 +93,6 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        integer_validator("height", value)
         self.__height = value
 
     @property
@@ -117,7 +115,6 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        no_neg_validator("x", value)
         self.__x = value
 
     @y.setter
@@ -128,7 +125,6 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        no_neg_validator("y", value)
         self.__y = value
 
     def area(self):
