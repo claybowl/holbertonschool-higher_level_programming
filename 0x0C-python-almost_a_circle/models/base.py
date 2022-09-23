@@ -68,15 +68,11 @@ class Base:
             file <class>.json"""
 
         try:
-            filename = cls.__name__+".json"
-            with open(filename, "r", encoding="UTF8") as openedFile:
-                file_string = openedFile.read()
-                dlist = []
-                for obj in cls.from_json_string(file_string):
-                    dlist.append(cls.create(**obj))
-        except:
-            dlist = []
-        return dlist
+            with open(cls.__name__ + ".json", "r") as f:
+                return [cls.create(**d) for d in
+                        cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
 
     def integer_validator(self, value, num):
         """validate that num is an integer"""
