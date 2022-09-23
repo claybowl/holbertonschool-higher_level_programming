@@ -71,7 +71,6 @@ class Rectangle(Base):
                     elif key == "y":
                         self.y = value
 
-
     @property
     def width(self):
         """Retrieves the width of a Rectangle instance"""
