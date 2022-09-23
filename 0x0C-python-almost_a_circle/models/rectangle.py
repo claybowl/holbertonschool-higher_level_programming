@@ -5,8 +5,6 @@ Class rectangle module
 
 
 from models.base import Base
-integer_validator = __import__("models.base").base.integer_validator
-no_neg_validator = __import__("models.base").base.no_neg_validator
 
 
 class Rectangle(Base):
