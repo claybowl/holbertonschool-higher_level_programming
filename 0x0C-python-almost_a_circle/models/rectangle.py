@@ -28,6 +28,7 @@ class Rectangle(Base):
     def __str__(self):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
+
         if self.__height == 0 or self.__width == 0:
             return ''
         rec_str = ''
@@ -40,21 +41,25 @@ class Rectangle(Base):
     def __repr__(self):
         """Return a string representatio of rectangle
         to recreate using eval()"""
+
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     @property
     def width(self):
         """Retrieves the width of a Rectangle instance"""
+
         return self.__width
 
     @property
     def height(self):
         """Retrieves the height of Rectangle instance"""
+
         return self.__height
 
     @width.setter
     def width(self, value):
         """Sets the width of a rectangle instance"""
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -64,6 +69,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Sets the height of a Rectangle instance"""
+
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -72,10 +78,12 @@ class Rectangle(Base):
 
     def area(self):
         """Calculates the area of the rectangle"""
+
         return self.__width * self.__height
 
     def perimeter(self):
         """Calculates the perimeter"""
+
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__width + self.__height)
