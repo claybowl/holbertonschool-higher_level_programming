@@ -124,10 +124,10 @@ class Rectangle(Base):
     def x(self, num):
         """Sets the x attribute"""
 
-        ##if type(value) is not int:
-        ##    raise TypeError("x must be an integer")
-        ##if value < 0:
-        ##    raise ValueError("x must be >= 0")
+        if type(value) is not int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         no_neg_validator("x", num)
         self.__x = num
 
@@ -135,10 +135,10 @@ class Rectangle(Base):
     def y(self, num):
         """Sets the y attribute"""
 
-        ## if type(value) is not int:
-        ##    raise TypeError("y must be an integer")
-        ##if value < 0:
-        ##    raise ValueError("y must be >= 0")
+        if type(value) is not int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         no_neg_validator("y", num)
         self.__y = num
 
