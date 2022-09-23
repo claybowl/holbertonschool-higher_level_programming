@@ -7,8 +7,10 @@ This file contains the square class, which inherits the rectangle class
 from ctypes import sizeof
 
 
+
+
 Rectangle = __import__("models.rectangle").rectangle.Rectangle
-validate_int = __import__("models.base").base.validate_int
+integer_validator = __import__("models.base").base.int_validator
 
 
 class Square(Rectangle):
