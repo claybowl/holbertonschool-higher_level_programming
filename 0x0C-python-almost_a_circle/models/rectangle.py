@@ -5,6 +5,8 @@ Class rectangle module
 
 
 from models.base import Base
+integer_validator = __import__("models.base").base.integer_validator
+no_neg_validator = __import__("models.base").base.no_neg_validator
 
 
 class Rectangle(Base):
@@ -13,6 +15,7 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initializes class Rectangle"""
 
+        super().__init__(id)
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
@@ -22,7 +25,6 @@ class Rectangle(Base):
         self.no_neg_validator("y", y)
         self.__x = x
         self.__y = y
-        super().__init__(id)
 
     def __str__(self):
         """Returns an informal and nicely printable string"""
@@ -88,10 +90,10 @@ class Rectangle(Base):
     def width(self, width):
         """Sets the width of a rectangle instance"""
 
-        ##if type(width) is not int:
-        ##    raise TypeError("width must be an integer")
-        ##if width < 0:
-        ##    raise ValueError("width must be >= 0")
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
         integer_validator("width", width)
         self.__width = width
 
@@ -99,10 +101,10 @@ class Rectangle(Base):
     def height(self, height):
         """Sets the height of a Rectangle instance"""
 
-        ##if type(height) is not int:
-        ##    raise TypeError("height must be an integer")
-        ##if height < 0:
-        ##    raise ValueError("height must be >= 0")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
         integer_validator("height", height)
         self.__height = height
 
