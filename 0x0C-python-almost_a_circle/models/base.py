@@ -76,7 +76,6 @@ class Base:
 
 def integer_validator(value, num):
     """validate that num is an integer"""
-
     if type(value) is not str:
         raise TypeError("value passed to integer_validator must be string")
     if type(num) is not int:
@@ -86,7 +85,6 @@ def integer_validator(value, num):
 
 def no_neg_validator(value, num):
     """validate that num is a 0 or positive integer"""
-
     if type(value) is not str:
         raise TypeError("value passed to no_neg_validator must be string")
     if type(num) is not int:
