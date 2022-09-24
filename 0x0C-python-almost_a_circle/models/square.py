@@ -24,6 +24,7 @@ class Square(Rectangle):
         integer_validator("size", size)
         no_neg_validator("x", x)
         no_neg_validator("y", y)
+        integer_validator("id", id)
         super().__init__(size, size, x, y, id)
 
     @property
