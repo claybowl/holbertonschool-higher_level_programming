@@ -2,6 +2,8 @@
 """Module test_base
 Test for Base Class
 """
+
+
 import inspect
 from models.base import Base
 from models.rectangle import Rectangle
