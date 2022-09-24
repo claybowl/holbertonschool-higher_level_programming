@@ -4,9 +4,6 @@ This file contains the square class, which inherits the rectangle class
 """
 
 
-from ctypes import sizeof
-
-
 Rectangle = __import__("models.rectangle").rectangle.Rectangle
 integer_validator = __import__("models.base").base.integer_validator
 no_neg_validator = __import__("models.base").base.no_neg_validator
