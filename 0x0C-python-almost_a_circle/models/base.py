@@ -78,8 +78,6 @@ class Base:
 def integer_validator(value, num):
     """validate that num is an integer"""
 
-    if type(value) is not str:
-        raise TypeError("value passed to integer_validator must be string")
     if type(num) is not int:
         raise TypeError(f"{value} must be an integer")
     if num <= 0:
