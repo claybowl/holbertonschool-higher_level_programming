@@ -12,6 +12,7 @@ from models.rectangle import Rectangle
 from models import rectangle
 import inspect
 import pep8
+import pycodestyle
 
 
 class TestRectangleDocs(unittest.TestCase):

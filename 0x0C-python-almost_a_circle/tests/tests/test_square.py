@@ -4,7 +4,7 @@ import pep8
 import unittest
 from models.base import Base
 from models.square import Square
-
+import pycodestyle
 
 class TestClassSquare(unittest.TestCase):
     """Test class for testing Square class"""
