@@ -22,50 +22,44 @@ class TestClassSquare(unittest.TestCase):
                          0, "Found code style errors (and warnings).")
 
     def tearDown(self):
-        """
-        Reset the Base._nb_objects to 0
-        """
+        """Reset the Base._nb_objects to 0"""
+
         Base._nb_objects = 0
 
     def test_width(self):
-        """
-        Test that the width of the square is correct
-        """
+        """Test that the width of the square is correct"""
+
         s1 = Square(10)
         self.assertEqual(s1.width, 10)
         s2 = Square(10, 0, 0, 12)
 
     def test_width_type(self):
-        """
-        Test that the width of the square is of type int
-        """
+        """Test that the width of the square is of type int"""
+
         s1 = Square(10)
         self.assertEqual(type(s1.width), int)
         s2 = Square(10, 0, 0, 12)
         self.assertEqual(type(s2.width), int)
 
     def test_height(self):
-        """
-        Test that the height of the square is correct
-        """
+        """Test that the height of the square is correct"""
+
         s1 = Square(10)
         self.assertEqual(s1.height, 10)
         s2 = Square(10, 0, 0, 12)
         self.assertEqual(s2.height, 10)
 
     def test_height_type(self):
-        """
-        Test that the height of the square is of type int
-        """
+        """Test that the height of the square is of type int"""
+
         s1 = Square(10)
         self.assertEqual(type(s1.height), int)
         s2 = Square(10, 0, 0, 12)
         self.assertEqual(type(s2.height), int)
 
     def test_raise_size_x_y(self):
-        """
-        Test that the height of the square is correct
-        """
+        """Test that the height of the square is correct"""
+
         with self.assertRaises(TypeError, msg="width must be an integer"):
             s1 = Square("10")
         with self.assertRaises(TypeError, msg="x must be an integer"):
@@ -74,18 +68,16 @@ class TestClassSquare(unittest.TestCase):
             s3 = Square(10, 0, "0")
 
     def test_x(self):
-        """
-        Test that the x of the square is correct
-        """
+        """Test that the x of the square is correct"""
+
         s1 = Square(10)
         self.assertEqual(s1.x, 0)
         s2 = Square(10, 0, 0, 12)
         self.assertEqual(s2.x, 0)
 
     def test_size_area(self):
-        """
-        Test that tests use of size method and area
-        """
+        """Test that tests use of size method and area"""
+
         s1 = Square(10)
         self.assertEqual(s1.size, 10)
         self.assertEqual(s1.area(), 100)
@@ -100,9 +92,8 @@ class TestClassSquare(unittest.TestCase):
 
 class NewTest(unittest.TestCase):
     def test_id(self):
-        """
-        Test that the id of the square is correct
-        """
+        """Test that the id of the square is correct"""
+
         s1 = Square(10)
         self.assertEqual(s1.id, 19)
         s2 = Square(10, 0, 0, 12)
@@ -331,6 +322,7 @@ class TestSquare_load_from_file(unittest.TestCase):
 
     def test_load_from_file(self):
         """tests load_from_file in square"""
+
         s1 = Square(8, 7, 6, 5)
         s2 = Square(20, 30, 40, 50)
         test_input = [s1, s2]
