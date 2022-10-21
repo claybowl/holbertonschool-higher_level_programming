@@ -11,7 +11,10 @@ if __name__ == "__main__":
         database=argv[3])
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT c.id, c.name, s.name \
+                FROM cities C \
+                INNER JOIN states s \
+                on c.state_id = s.id")
     results = cur.fetchall()
     for item in results:
         print(item)
