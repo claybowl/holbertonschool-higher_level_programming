@@ -2,6 +2,8 @@
 """
 List every state in the databasse
 """
+
+
 from sys import argv
 import MySQLdb
 
