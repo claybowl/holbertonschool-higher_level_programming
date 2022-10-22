@@ -1,20 +1,11 @@
 #!/usr/bin/python3
+"""Start link class to table in database 
 """
-List every state in the databasse
-"""
-from sys import argv
-import MySQLdb
+import sys
+from model_state import Base, State
+
+from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(
-        host="localhost", post=3306, user=argv[1], passwd=argv[2],
-        database=argv[3])
-    cur = db.cursor()
-
-    cur.execute("SELECT * FROM states")
-    results = cur.fetchall()
-    for item in results:
-        print(item)
-
-    cur.close()
-    db.close()
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
