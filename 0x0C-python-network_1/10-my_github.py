@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """script taskes github credentials and displays id using github api"""
+
 import requests
 from requests.auth import HTTPBasicAuth
 from sys import argv
