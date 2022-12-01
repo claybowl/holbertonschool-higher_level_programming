@@ -1,4 +1,5 @@
 #!/usr/bin/node
+const process = require('process');
 let args = process.argv.slice(2);
 let n = args.length;
 if (n === 0) {
