@@ -8,13 +8,10 @@ const filePath = process.argv[3];
 request.get(url, (err, res, body) => {
   if (err) {
     console.error(err);
-    return;
   }
-
   fs.writeFile(filePath, body, err => {
     if (err) {
       console.error(err);
-      return;
     }
   });
 });
