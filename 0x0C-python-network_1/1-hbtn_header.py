@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""script takes & sends request to URL & displays value of X-Request-ID"""
+"""This code is a Python script that takes
+a URL as an argument and sends a request to the URL.
+It then displays the value of the X-Request-ID
+header from the response.
+"""
 import sys
 import urllib.request
 
