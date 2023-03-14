@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""script to fetch https://intranet.hbtn.io/status"""
+"""Python script that uses the ruequests library to fetch
+the status of the URL https://intranet.hbtn.io/status. It then
+prints out the type and content of the response from the request.
+"""
 import requests
 
 
